@@ -16,7 +16,7 @@ sudo systemctl set-default graphical.target
 reboot
 
 #DevTools and Extension Support
-sudo dnf install chrome-gnome-shell @development-tools
+sudo dnf install chrome-gnome-shell @development-tools -y
 
 #Atom
 sudo rpm --import https://packagecloud.io/AtomEditor/atom/gpgkey
