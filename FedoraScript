@@ -11,10 +11,6 @@ sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.co
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install brave-browser -y
 
-#Graphical Target
-sudo systemctl set-default graphical.target
-reboot
-
 #DevTools and Extension Support
 sudo dnf install chrome-gnome-shell @development-tools -y
 
@@ -27,17 +23,10 @@ sudo dnf install atom -y -y
 #Material Shell
 sudo dnf install npm -y
 git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
-gnome-session-quit
-gnome-extensions enable material-shell@papyelgringo
-git pull ~/.local/share/gnome-shell/extensions/material-shell@papyelgringo
-sudo dnf install flatpak
-flatpak install org.gnome.Extensions -y -y
-
 
 #RPM
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install akmod-nvidia -y
-reboot
 
 #Steam
 sudo dnf install steam -y
@@ -45,3 +34,13 @@ sudo dnf install steam -y
 #Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client -y -y
+
+#Graphical Target
+sudo systemctl set-default graphical.target
+reboot
+
+#Material Shell Launch
+gnome-extensions enable material-shell@papyelgringo
+git pull ~/.local/share/gnome-shell/extensions/material-shell@papyelgringo
+sudo dnf install flatpak
+flatpak install org.gnome.Extensions -y -y
