@@ -45,5 +45,3 @@ sudo dnf install steam -y
 #Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client -y -y
-
-TEST
