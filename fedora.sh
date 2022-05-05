@@ -3,7 +3,7 @@ sudo dnf upgrade -y
 reboot
 
 #Gnome, Terminal, File Explorer
-sudo dnf install @base-x gnome-shell terminator nautilus
+sudo dnf install @base-x gnome-shell terminator nautilus firefox
 
 #Brave
 sudo dnf install dnf-plugins-core
