@@ -41,6 +41,5 @@ reboot
 
 #Material Shell Launch
 gnome-extensions enable material-shell@papyelgringo
-git pull ~/.local/share/gnome-shell/extensions/material-shell@papyelgringo
 sudo dnf install flatpak
 flatpak install org.gnome.Extensions -y -y
