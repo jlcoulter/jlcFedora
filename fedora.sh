@@ -1,6 +1,6 @@
 #Update
-sudo dnf upgrade -y
-reboot
+#sudo dnf upgrade -y
+#reboot
 
 #Gnome, Terminal, File Explorer
 sudo dnf install @base-x gnome-shell terminator nautilus firefox
