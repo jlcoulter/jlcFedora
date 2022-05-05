@@ -24,8 +24,6 @@ sudo sh -c 'echo -e "[Atom]\nname=Atom Editor\nbaseurl=https://packagecloud.io/A
 sudo dnf repolist
 sudo dnf install atom -y -y
 
-sudo dnf install snapd -y
-
 #Material Shell
 sudo dnf install npm -y
 git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
