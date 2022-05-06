@@ -2,8 +2,14 @@
 #sudo dnf upgrade -y
 #reboot
 
-#Gnome, Terminal, File Explorer
-sudo dnf install @base-x gnome-shell terminator nautilus firefox
+#Gnome
+#sudo dnf install @base-x gnome-shell
+
+#i3
+sudo dnf install i3 -y
+
+#Terminal, File Explorer
+sudo dnf install terminator nautilus firefox
 
 #Brave
 sudo dnf install dnf-plugins-core
@@ -40,6 +46,6 @@ sudo systemctl set-default graphical.target
 reboot
 
 #Material Shell Launch
-gnome-extensions enable material-shell@papyelgringo
-sudo dnf install flatpak
-flatpak install org.gnome.Extensions -y -y
+#gnome-extensions enable material-shell@papyelgringo
+#sudo dnf install flatpak
+#flatpak install org.gnome.Extensions -y -y
