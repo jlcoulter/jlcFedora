@@ -1,5 +1,8 @@
 #Gnome
-sudo dnf install @base-x gnome-shell -y
+sudo dnf install @base-x gnome-shell npm -y
+
+#Material Shell
+git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
 
 #i3
 sudo dnf install i3 -y
@@ -36,11 +39,11 @@ sudo flatpak install flathub com.spotify.Client -y -y
 #Discord
 sudo dnf install discord -y
 
+#Graphical Target
+sudo systemctl set-default graphical.target
+reboot
+
 #Material Shell Launch
 gnome-extensions enable material-shell@papyelgringo
 sudo dnf install flatpak
 flatpak install org.gnome.Extensions -y -y
-
-#Graphical Target
-sudo systemctl set-default graphical.target
-reboot
