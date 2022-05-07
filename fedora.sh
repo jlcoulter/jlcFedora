@@ -2,9 +2,6 @@
 #sudo dnf upgrade -y
 #reboot
 
-#Gnome
-#sudo dnf install @base-x gnome-shell
-
 #i3
 sudo dnf install i3 -y
 
@@ -26,10 +23,6 @@ sudo sh -c 'echo -e "[Atom]\nname=Atom Editor\nbaseurl=https://packagecloud.io/A
 sudo dnf repolist
 sudo dnf install atom -y -y
 
-#Material Shell
-#sudo dnf install npm -y
-#git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
-
 #RPM
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install akmod-nvidia -y
@@ -44,8 +37,3 @@ sudo flatpak install flathub com.spotify.Client -y -y
 #Graphical Target
 sudo systemctl set-default graphical.target
 reboot
-
-#Material Shell Launch
-#gnome-extensions enable material-shell@papyelgringo
-#sudo dnf install flatpak
-#flatpak install org.gnome.Extensions -y -y
