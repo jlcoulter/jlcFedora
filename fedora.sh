@@ -9,7 +9,7 @@
 sudo dnf install i3 -y
 
 #Terminal, File Explorer
-sudo dnf install terminator nautilus firefox
+sudo dnf install terminator nautilus firefox -y
 
 #Brave
 sudo dnf install dnf-plugins-core
@@ -27,8 +27,8 @@ sudo dnf repolist
 sudo dnf install atom -y -y
 
 #Material Shell
-sudo dnf install npm -y
-git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
+#sudo dnf install npm -y
+#git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
 
 #RPM
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
