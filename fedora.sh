@@ -33,6 +33,9 @@ sudo dnf install steam -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client -y -y
 
+#Discord
+sudo dnf install discord -y
+
 #Material Shell Launch
 gnome-extensions enable material-shell@papyelgringo
 sudo dnf install flatpak
