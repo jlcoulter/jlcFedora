@@ -4,11 +4,8 @@ sudo dnf install @base-x gnome-shell npm -y
 #Material Shell
 git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
 
-#i3
-sudo dnf install i3 -y
-
 #Terminal, File Explorer
-sudo dnf install terminator nautilus firefox -y
+sudo dnf install terminator nautilus firefox variety -y
 
 #Brave
 sudo dnf install dnf-plugins-core
