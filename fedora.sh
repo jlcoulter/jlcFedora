@@ -5,7 +5,7 @@ sudo dnf install @base-x gnome-shell -y
 sudo dnf install i3 -y
 
 #Terminal, File Explorer
-sudo dnf install terminator nautilus -y
+sudo dnf install terminator nautilus firefox -y
 
 #Brave
 sudo dnf install dnf-plugins-core
