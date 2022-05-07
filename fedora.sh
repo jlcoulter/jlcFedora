@@ -1,12 +1,11 @@
-#Update
-#sudo dnf upgrade -y
-#reboot
+#Gnome
+sudo dnf install @base-x gnome-shell -y
 
 #i3
 sudo dnf install i3 -y
 
 #Terminal, File Explorer
-sudo dnf install terminator nautilus firefox -y
+sudo dnf install terminator nautilus -y
 
 #Brave
 sudo dnf install dnf-plugins-core
@@ -33,6 +32,11 @@ sudo dnf install steam -y
 #Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client -y -y
+
+#Material Shell Launch
+gnome-extensions enable material-shell@papyelgringo
+sudo dnf install flatpak
+flatpak install org.gnome.Extensions -y -y
 
 #Graphical Target
 sudo systemctl set-default graphical.target
