@@ -1,5 +1,5 @@
 #Gnome
-sudo dnf install @base-x gnome-shell npm -y
+sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
 #Terminal, File Explorer
 sudo dnf install terminator nautilus firefox vim variety screenfetch -y
