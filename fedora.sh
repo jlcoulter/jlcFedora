@@ -15,22 +15,22 @@ sudo dnf install brave-browser -y
 #DevTools and Extension Support
 sudo dnf install chrome-gnome-shell @development-tools -y
 
-#Vscodium
-sudo tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
-[gitlab.com_paulcarroty_vscodium_repo]
-name=gitlab.com_paulcarroty_vscodium_repo
-baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-metadata_expire=1h
-EOF
-sudo dnf install codium -y
-
 #RPM
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install akmod-nvidia -y
+
+#VS Code
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+sudo dnf check-update
+sudo dnf install code -y
 
 #Steam
 sudo dnf install steam -y
