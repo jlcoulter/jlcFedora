@@ -2,7 +2,7 @@
 sudo dnf install @base-x gnome-shell npm -y
 
 #Terminal, File Explorer
-sudo dnf install terminator nautilus firefox variety -y
+sudo dnf install terminator nautilus firefox vim variety -y
 
 #Brave
 sudo dnf install dnf-plugins-core
