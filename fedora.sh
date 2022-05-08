@@ -4,8 +4,10 @@ sudo dnf install @base-x gnome-shell npm -y
 #Terminal, File Explorer
 sudo dnf install terminator nautilus firefox vim variety -y
 
+#dnf-plugins-core
+sudo dnf install dnf-plugins-core -y
+
 #Brave
-sudo dnf install dnf-plugins-core
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install brave-browser -y
@@ -44,3 +46,11 @@ flatpak install org.gnome.Extensions -y -y
 
 #Material Shell Launch
 gnome-extensions enable material-shell@papyelgringo
+
+#Edit dnf
+sudo vim /etc/dnf/dnf.conf
+{
+  #Add new lines
+  max_parallel_downloads=10
+  fastestmirror=True
+}
