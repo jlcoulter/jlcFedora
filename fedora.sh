@@ -38,6 +38,9 @@ sudo dnf install steam -y
 #Gimp
 sudo dnf install gimp -y
 
+#RawTherapee
+sudo dnf install rawtherapee -y
+
 #KDENlive
 sudo dnf install kdenlive -y
 
