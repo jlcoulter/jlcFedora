@@ -35,6 +35,12 @@ sudo dnf install akmod-nvidia -y
 #Steam
 sudo dnf install steam -y
 
+#Gimp
+sudo dnf install gimp -y
+
+#KDENlive
+sudo dnf install kdenlive -y
+
 #Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub com.spotify.Client -y -y
