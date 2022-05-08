@@ -54,3 +54,12 @@ sudo vim /etc/dnf/dnf.conf
   max_parallel_downloads=10
   fastestmirror=True
 }
+
+#Edit /etc/default/grub
+sudo vim /etc/default/grub
+GRUB_TIMEOUT=2
+GRUB_TIMEOUT_STYLE=hidden
+
+#Update /boot/grub2/grub/cfg
+sudo su
+grub2-mkconfig -o /boot/grub2/grub.cfg
