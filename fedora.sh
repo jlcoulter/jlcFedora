@@ -3,6 +3,8 @@ sudo dnf install @base-x gnome-shell npm -y
 
 #Material Shell
 git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
+sudo dnf install flatpak
+flatpak install org.gnome.Extensions -y -y
 
 #Terminal, File Explorer
 sudo dnf install terminator nautilus firefox variety -y
@@ -42,5 +44,3 @@ reboot
 
 #Material Shell Launch
 gnome-extensions enable material-shell@papyelgringo
-sudo dnf install flatpak
-flatpak install org.gnome.Extensions -y -y
