@@ -19,7 +19,7 @@ sudo dnf install chrome-gnome-shell @development-tools -y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install akmod-nvidia -y
 
-#VS Code
+#VS Code -- Extensions "JavaScript Debugger (Nightly)" "Live Server"
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
 [code]
@@ -79,3 +79,8 @@ GRUB_TIMEOUT_STYLE=hidden
 #Update /boot/grub2/grub/cfg
 sudo su
 grub2-mkconfig -o /boot/grub2/grub.cfg
+
+#Chrome
+sudo dnf install fedora-workstation-repositories -y
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install google-chrome-stable -y -y
