@@ -51,6 +51,9 @@ sudo flatpak install flathub com.spotify.Client -y -y
 #Discord
 sudo dnf install discord -y
 
+#Stacer
+sudo dnf install stacer -y
+
 #Graphical Target
 sudo systemctl set-default graphical.target
 reboot
