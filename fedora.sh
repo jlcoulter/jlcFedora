@@ -2,7 +2,7 @@
 sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
 #Terminal, File Explorer
-sudo dnf install terminator fish nautilus firefox vim variety screenfetch -y
+sudo dnf install terminator fish nautilus firefox vim variety screenfetch awesome rofi -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
