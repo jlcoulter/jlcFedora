@@ -18,10 +18,17 @@ sudo dnf install brave-browser -y
 #DevTools and Extension Support
 sudo dnf install chrome-gnome-shell @development-tools -y
 
-#Atom
-sudo rpm --import https://packagecloud.io/AtomEditor/atom/gpgkey
-sudo sh -c 'echo -e "[Atom]\nname=Atom Editor\nbaseurl=https://packagecloud.io/AtomEditor/atom/el/7/\$basearch\nenabled=1\ngpgcheck=0\nrepo_gpgcheck=1\ngpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey" > /etc/yum.repos.d/atom.repo'
-sudo dnf install atom -y
+#VS Code
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+sudo dnf install code -y
 
 #Steam
 sudo dnf install steam -y
