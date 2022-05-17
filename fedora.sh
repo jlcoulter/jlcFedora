@@ -1,6 +1,9 @@
 #Gnome
 sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
+#RPM
+sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 #Terminal, File Explorer
 sudo dnf install alacritty terminator fish nautilus pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom -y
 
@@ -15,10 +18,10 @@ sudo dnf install brave-browser -y
 #DevTools and Extension Support
 sudo dnf install chrome-gnome-shell @development-tools -y
 
-#Sublime with Git
-sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
-sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
-sudo dnf install sublime-text sublime-merge
+#Atom
+sudo rpm --import https://packagecloud.io/AtomEditor/atom/gpgkey
+sudo sh -c 'echo -e "[Atom]\nname=Atom Editor\nbaseurl=https://packagecloud.io/AtomEditor/atom/el/7/\$basearch\nenabled=1\ngpgcheck=0\nrepo_gpgcheck=1\ngpgkey=https://packagecloud.io/AtomEditor/atom/gpgkey" > /etc/yum.repos.d/atom.repo'
+sudo dnf install atom -y
 
 #Steam
 sudo dnf install steam -y
@@ -33,8 +36,7 @@ sudo dnf install rawtherapee -y
 sudo dnf install kdenlive -y
 
 #Spotify
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub com.spotify.Client -y -y
+sudo dnf install lpf-spotify-client -y
 
 #Discord
 sudo dnf install discord -y
@@ -45,6 +47,9 @@ sudo dnf install stacer -y
 #Graphical Target
 sudo systemctl set-default graphical.target
 reboot
+
+
+
 
 #Material Shell
 git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
