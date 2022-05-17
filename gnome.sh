@@ -2,7 +2,7 @@
 sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish nautilus vim nitrogen neofetch stacer -y
+sudo dnf install alacritty fish nautilus vim nitrogen neofetch stacer snapd -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -40,7 +40,8 @@ sudo dnf install rawtherapee -y
 sudo dnf install kdenlive -y
 
 #Spotify
-sudo dnf install lpf-spotify-client -y
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install spotify
 
 #Discord
 sudo dnf install discord -y

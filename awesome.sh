@@ -2,7 +2,7 @@
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm stacer -y
+sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm stacer snapd -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -40,7 +40,8 @@ sudo dnf install rawtherapee -y
 sudo dnf install kdenlive -y
 
 #Spotify
-sudo dnf install lpf-spotify-client -y
+sudo ln -s /var/lib/snapd/snap /snap
+sudo snap install spotify
 
 #Discord
 sudo dnf install discord -y
