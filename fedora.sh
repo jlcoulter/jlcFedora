@@ -15,22 +15,10 @@ sudo dnf install brave-browser -y
 #DevTools and Extension Support
 sudo dnf install chrome-gnome-shell @development-tools -y
 
-#RPM
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install akmod-nvidia -y
-
-#VS Code -- Extensions "JavaScript Debugger (Nightly)" "Live Server"
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo
-[code]
-name=Visual Studio Code
-baseurl=https://packages.microsoft.com/yumrepos/vscode
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-EOF
-sudo dnf check-update
-sudo dnf install code -y
+#Sublime with Git
+sudo rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+sudo dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+sudo dnf install sublime-text sublime-merge
 
 #Steam
 sudo dnf install steam -y
