@@ -2,7 +2,7 @@
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm -y
+sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm stacer -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -44,9 +44,6 @@ sudo dnf install lpf-spotify-client -y
 
 #Discord
 sudo dnf install discord -y
-
-#Stacer
-sudo dnf install stacer -y
 
 #Graphical Target
 sudo systemctl set-default graphical.target

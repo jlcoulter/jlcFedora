@@ -2,7 +2,7 @@
 sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish nautilus vim nitrogen neofetch awesome dmenu -y
+sudo dnf install alacritty fish nautilus vim nitrogen neofetch stacer -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -44,9 +44,6 @@ sudo dnf install lpf-spotify-client -y
 
 #Discord
 sudo dnf install discord -y
-
-#Stacer
-sudo dnf install stacer -y
 
 #Graphical Target
 sudo systemctl set-default graphical.target
