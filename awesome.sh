@@ -1,11 +1,8 @@
-#Gnome
-sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
-
 #RPM
 sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 #Terminal, File Explorer
-sudo dnf install alacritty terminator fish nautilus pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom -y
+sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -16,7 +13,7 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install brave-browser -y
 
 #DevTools and Extension Support
-sudo dnf install chrome-gnome-shell @development-tools -y
+sudo dnf install @development-tools -y
 
 #VS Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
