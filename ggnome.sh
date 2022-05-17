@@ -2,7 +2,7 @@
 sudo dnf install @base-x gnome-shell gnome-disk-utility npm -y
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish nautilus vim nitrogen neofetch stacer snapd -y
+sudo dnf install alacritty fish nautilus vim nitrogen neofetch stacer snapd flameshot -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
