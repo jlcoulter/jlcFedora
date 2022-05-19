@@ -3,7 +3,7 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom lightdm stacer snapd flameshot -y
+sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom sddm stacer snapd flameshot -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -48,19 +48,13 @@ sudo snap install spotify
 sudo dnf install discord -y
 
 #Graphical Target
+sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
 reboot
 
 
 
 
-#Material Shell
-git clone https://github.com/material-shell/material-shell.git && cd material-shell && make install
-sudo dnf install flatpak
-flatpak install org.gnome.Extensions -y -y
-
-#Material Shell Launch
-gnome-extensions enable material-shell@papyelgringo
 
 #Edit dnf
 sudo vim /etc/dnf/dnf.conf
@@ -78,8 +72,3 @@ GRUB_TIMEOUT_STYLE=hidden
 #Update /boot/grub2/grub/cfg
 sudo su
 grub2-mkconfig -o /boot/grub2/grub.cfg
-
-#Chrome
-sudo dnf install fedora-workstation-repositories -y
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf install google-chrome-stable -y -y
