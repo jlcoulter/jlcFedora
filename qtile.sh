@@ -7,7 +7,7 @@ sudo dnf copr enable frostyx/qtile -y
 sudo dnf install qtile qtile-extras -y
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom sddm stacer snapd flameshot -y
+sudo dnf install alacritty thunar vim nitrogen neofetch dmenu polkit picom sddm stacer snapd flameshot -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
