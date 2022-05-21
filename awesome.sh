@@ -50,6 +50,8 @@ sudo dnf install discord -y
 #Graphical Target
 sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
+
+
 #reboot
 
 
@@ -57,18 +59,18 @@ sudo systemctl set-default graphical.target
 
 
 #Edit dnf
-sudo vim /etc/dnf/dnf.conf
-{
-  #Add new lines
-  max_parallel_downloads=10
-  fastestmirror=True
-}
+#sudo vim /etc/dnf/dnf.conf
+#{
+#  #Add new lines
+#  max_parallel_downloads=10
+#  fastestmirror=True
+#}
 
-#Edit /etc/default/grub
-sudo vim /etc/default/grub
-GRUB_TIMEOUT=2
-GRUB_TIMEOUT_STYLE=hidden
+##Edit /etc/default/grub
+#sudo vim /etc/default/grub
+#GRUB_TIMEOUT=2
+#GRUB_TIMEOUT_STYLE=hidden
 
-#Update /boot/grub2/grub/cfg
-sudo su
-grub2-mkconfig -o /boot/grub2/grub.cfg
+##Update /boot/grub2/grub/cfg
+#sudo su
+#grub2-mkconfig -o /boot/grub2/grub.cfg
