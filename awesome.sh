@@ -3,7 +3,7 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
 #Terminal, File Explorer
-sudo dnf install alacritty fish pcmanfm firefox vim nitrogen neofetch awesome dmenu polkit picom sddm stacer snapd flameshot -y
+sudo dnf install alacritty thunar firefox vim nitrogen neofetch awesome rofi polkit picom sddm stacer snapd flameshot -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -50,7 +50,7 @@ sudo dnf install discord -y
 #Graphical Target
 sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
-reboot
+#reboot
 
 
 
