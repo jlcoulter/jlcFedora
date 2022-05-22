@@ -68,7 +68,7 @@
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
   window:
-    opacity: 0.6
+    opacity: 0.7
 
   # Startup Mode (changes require restart)
   #
@@ -109,19 +109,43 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+  #font:
   # Normal (roman) font face
-  #normal:
+      #normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+        #family: Hack
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+           #style: Regular
+           
+  font:
+    size: 18
+    normal:
+      family: Hack NF
+      style: Regular
+
+  font:
+    size: 18
+    bold:
+      family: Hack NF
+      style: Bold
+
+  font:
+    size: 18
+    italic:
+      family: Hack NF
+      style: Italic
+
+  font:
+    size: 18
+    bold_italic:
+      family: Hack NF
+      style: Bold Italic
 
   # Bold font face
   #bold:
@@ -156,8 +180,8 @@
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 
-    #Point size
-    #size: 18.0
+  # Point size
+  #size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -331,7 +355,7 @@
   # Whether or not `window.opacity` applies to all cell backgrounds or only to
   # the default background. When set to `true` all cells will be transparent
   # regardless of their background color.
-  #transparent_background_colors: true
+  #transparent_background_colors: false
 
 # Bell
 #
