@@ -11,6 +11,12 @@ sudo dnf install libx11 xrandr xorg-server libxinerama -y
 #leftwm
 sudo dnf copr enable atim/leftwm -y && sudo dnf install leftwm polybar -y
 
+#zsh
+sudo dnf install zsh util-linux-user -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+chsh -s /usr/bin/zsh
+
 #base applications
 sudo dnf install alacritty nnn micro nitrogen neofetch picom snapd flameshot rofi glances lm_sensors -y
 
