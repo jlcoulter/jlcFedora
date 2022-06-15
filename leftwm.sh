@@ -9,7 +9,7 @@ sudo dnf install @development-tools -y
 sudo dnf install libx11 xrandr xorg-server libxinerama -y
 
 #leftwm
-sudo dnf copr enable atim/leftwm -y && sudo dnf install leftwm -y
+sudo dnf copr enable atim/leftwm -y && sudo dnf install leftwm polybar -y
 
 #base applications
 sudo dnf install alacritty sddm nnn micro nitrogen neofetch picom snapd flameshot rofi glances lm_sensors -y
