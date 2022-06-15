@@ -32,7 +32,7 @@ sudo snap install spotify -y
 #Discord
 sudo dnf install discord -y
 
-sudo dnf install gdm3
-sudo systemctl enable gdm.service
+sudo dnf install sddm
+sudo systemctl enable sddm
 sudo systemctl set-default graphical.target
 reboot
