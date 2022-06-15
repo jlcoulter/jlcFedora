@@ -12,7 +12,7 @@ sudo dnf install libx11 xrandr xorg-server libxinerama -y
 sudo dnf copr enable atim/leftwm -y && sudo dnf install leftwm polybar -y
 
 #base applications
-sudo dnf install alacritty sddm nnn micro nitrogen neofetch picom snapd flameshot rofi glances lm_sensors -y
+sudo dnf install alacritty nnn micro nitrogen neofetch picom snapd flameshot rofi glances lm_sensors -y
 
 #dnf-plugins-core
 sudo dnf install dnf-plugins-core -y
@@ -32,6 +32,7 @@ sudo snap install spotify -y
 #Discord
 sudo dnf install discord -y
 
-sudo systemctl enable sddm
+sudo dnf install gdm3
+sudo systemctl enable gdm
 sudo systemctl set-default graphical.target
 reboot
