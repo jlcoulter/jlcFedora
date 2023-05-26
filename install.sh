@@ -4,7 +4,8 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf install leftwm polybar nnn picom rofi alacritty neovim code -y -y
 sudo dnf remove xfce4-terminal -y
 mv config.ron ~/.config/leftwm/
-mkdir ~/.config/leftwm/themes
+mkdir ~/.config/leftwm/themes ~/.config/autostart
 mv polybar ~/.config/leftwm/themes
 ln -s ~/.config/leftwm/themes/polybar ~/.config/leftwm/themes/current
+mv up.desktop ~/.config/autostart
 reboot
