@@ -8,4 +8,9 @@ mv config.ron ~/.config/leftwm/
 mv polybar ~/.config/leftwm/themes
 ln -s ~/.config/leftwm/themes/polybar ~/.config/leftwm/themes/current
 mv up.desktop ~/.config/autostart
+cd ~/git/
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+cd rofi
+chmod +x setup.sh
+./setup.sh
 reboot
