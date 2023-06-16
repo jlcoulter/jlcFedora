@@ -7,6 +7,8 @@ mkdir ~/.config/leftwm ~/.config/leftwm/themes ~/.config/autostart
 mv config.ron ~/.config/leftwm/
 mv polybar ~/.config/leftwm/themes
 sudo mv dnf.conf /etc/dnf/ -f
+mv alacritty ~/.config/
+mv .zshrc ~/
 ln -s ~/.config/leftwm/themes/polybar ~/.config/leftwm/themes/current
 mv up.desktop ~/.config/autostart
 cd ~/git/
@@ -17,4 +19,3 @@ chmod +x setup.sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
-reboot
