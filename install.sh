@@ -6,6 +6,7 @@ sudo dnf remove xfce4-terminal nano -y
 mkdir ~/.config/leftwm ~/.config/leftwm/themes ~/.config/autostart
 mv config.ron ~/.config/leftwm/
 mv polybar ~/.config/leftwm/themes
+mv dnf.conf /etc/dnf/
 ln -s ~/.config/leftwm/themes/polybar ~/.config/leftwm/themes/current
 mv up.desktop ~/.config/autostart
 cd ~/git/
