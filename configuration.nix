@@ -46,9 +46,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the Enlightenment Desktop Environment.
+  # Enable the Leftwm Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.enlightenment.enable = true;
   services.xserver.windowManager.leftwm.enable = true;
 
   # Enable acpid
